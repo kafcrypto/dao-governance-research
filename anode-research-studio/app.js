@@ -1,3 +1,8 @@
+const brandSheet=document.createElement('link');
+brandSheet.rel='stylesheet';
+brandSheet.href=location.pathname.includes('/h001/')||location.pathname.includes('/h002/')?'../brand.css':'brand.css';
+document.head.appendChild(brandSheet);
+
 const libraryItems=[
 {id:'H002',title:'The DAO Delegation Handbook',type:'Handbook',status:'Ready',url:'h002/'},
 {id:'H001',title:'The Tokenholder Governance Handbook',type:'Handbook',status:'Ready',url:'h001/'},
@@ -77,4 +82,10 @@ function initField(){
 
 function initNav(){document.querySelector('.mobile-toggle')?.addEventListener('click',()=>document.querySelector('.nav')?.classList.toggle('open'))}
 
-document.addEventListener('DOMContentLoaded',()=>{initLibrary();initIdeas();initFrameworks();initField();initNav();});
+function initBrandCopy(){
+ const homeHero=document.querySelector('.hero h1');
+ if(homeHero)homeHero.innerHTML='Better systems for collective action — <em>then act.</em>';
+ document.querySelectorAll('.navcta').forEach(el=>el.textContent='START A CONVERSATION ↗');
+}
+
+document.addEventListener('DOMContentLoaded',()=>{initLibrary();initIdeas();initFrameworks();initField();initNav();initBrandCopy();});
