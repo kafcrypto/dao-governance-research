@@ -1,10 +1,12 @@
-name: Deploy Anode Steward to GitHub Pages
+name: Deploy DAO Governance Research to GitHub Pages
 
 on:
   push:
     branches: ["main"]
     paths:
       - "anode-steward/**"
+      - "anode-governance-rights-checkup/**"
+      - "index.html"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -31,7 +33,7 @@ jobs:
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./anode-steward
+          path: .
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
