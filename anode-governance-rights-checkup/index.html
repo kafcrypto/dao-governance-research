@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Anode Governance Rights Checkup — an interactive guide to the governance rights embedded in digital assets." />
+  <meta name="theme-color" content="#f1efe7" />
+  <title>Anode Governance Rights Checkup</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" aria-label="Primary">
+    <a class="brand" href="https://www.anode.gg/" target="_blank" rel="noreferrer" aria-label="Anode Research Studio">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span>ANODE RESEARCH STUDIO</span>
+    </a>
+    <div class="header-meta" aria-label="Research status">
+      <span>GOVERNANCE RIGHTS</span>
+      <span class="field-status"><i></i> FIELD ACTIVE</span>
+    </div>
+    <button class="text-button" id="resetHeader" type="button">RESET SESSION ↺</button>
+  </header>
+
+  <div class="system-bar" aria-hidden="true">
+    <span>DECISIONS ✳ RIGHTS ✳ MATERIALITY ✳ POLICY ✳ EXECUTION ✳ EVIDENCE ✳</span>
+    <span>DECISIONS ✳ RIGHTS ✳ MATERIALITY ✳ POLICY ✳ EXECUTION ✳ EVIDENCE ✳</span>
+  </div>
+
+  <main id="main" tabindex="-1">
+    <section class="progress-shell" aria-label="Progress">
+      <div class="progress-kicker"><span id="progressIndex">00</span> / <span id="progressLabel">ENTRY</span></div>
+      <div class="progress-track" aria-hidden="true"><span id="progressFill"></span></div>
+      <ol class="progress-steps" id="progressSteps">
+        <li data-step="landing">ENTRY</li>
+        <li data-step="asset">ASSET</li>
+        <li data-step="rights">RIGHTS</li>
+        <li data-step="activation">ACTIVATION</li>
+        <li data-step="event">EVENT</li>
+        <li data-step="materiality">MATERIALITY</li>
+        <li data-step="posture">POSTURE</li>
+        <li data-step="result">RESULT</li>
+      </ol>
+    </section>
+
+    <section id="app" class="app-shell" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>ANODE / 2026</strong>
+      <p>Decision systems, incentive design & coordination research.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.anode.gg/" target="_blank" rel="noreferrer">ANODE ↗</a>
+      <a href="https://www.anode.gg/" target="_blank" rel="noreferrer">ANODE.GG ↗</a>
+      <a href="mailto:hello@anode.gg">HELLO@ANODE.GG ↗</a>
+    </div>
+  </footer>
+
+  <template id="choiceTemplate">
+    <button class="choice-card" type="button">
+      <span class="choice-code"></span>
+      <span class="choice-title"></span>
+      <span class="choice-copy"></span>
+      <span class="choice-arrow" aria-hidden="true">↗</span>
+    </button>
+  </template>
+
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
